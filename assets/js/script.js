@@ -26,6 +26,8 @@ function runGame(gameType) {
   
   if (gameType === "addition") {
     displayAdditionQuestion(num1, num2);
+  } else if(gameType ==="subtract"){
+    displaySubtractQuestion(num1,num2)
   } else {
     alert("unknown game type!");
     throw `Unknown game type: ${gameType}. Aborting!`;
@@ -56,7 +58,9 @@ let operand2 = parseInt(document.getElementById("operand2").innerText);
 let operator = document.getElementById("operator").innerText;
 if (operator === "+"){
     return [operand1 + operand2, "addition"];
-} else{
+} else if(operator ==="-"){
+   return[operand1 - operand2, "subtract"];
+}else{
     alert(`Unimplemented operator ${operator}`);
     throw `unimplemented operator ${operator}.aborting`;
 }
