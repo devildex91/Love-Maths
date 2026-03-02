@@ -39,8 +39,10 @@ function checkAnswer() {
 
    if (isCorrect){
     alert("Hey you got it right");
+    // incrementScore();
    } else {
     alert(`unlucky you put ${userAnswer}. The correct answer was ${calculatedAnswer[0]} `);
+    // incrementWrongAnswer();
    }
 
    runGame(calculatedAnswer[1]);
@@ -60,7 +62,11 @@ if (operator === "+"){
 }
 
 }
-function incrementScore() {}
+function incrementScore() {
+    let plusScoreBox = document.getElementById("score").innerText;
+    plusScoreBox = parseInt(plusScoreBox);
+    plusScoreBox ++;
+}
 function incrementWrongAnswer() {}
 function displayAdditionQuestion(operand1, operand2) {
   document.getElementById("operand1").textContent = operand1;
