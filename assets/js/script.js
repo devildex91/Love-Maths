@@ -41,18 +41,11 @@ default:
   alert(`unknown game type ${gameType}`);
   throw `unknown game type: ${gameType}. Aborting!`
   }
-  // if (gameType === "addition") {
-  //   displayAdditionQuestion(num1, num2);
-  // } else if(gameType ==="subtract"){
-  //   displaySubtractQuestion(num1,num2)
-  // } else {
-  //   alert("unknown game type!");
-  //   throw `Unknown game type: ${gameType}. Aborting!`;
-  // }
+ 
 }
 /**Checks the answer against the first element in the returned calcualteCorrectAnswer array */
 function checkAnswer() {
-   let userAnswer = parseInt(document.getElementById("answer-box").value);
+   let userAnswer = parseFloat(document.getElementById("answer-box").value);
    let calculatedAnswer = calculateCorrectAnswer();
    let isCorrect = userAnswer === calculatedAnswer[0];
 
